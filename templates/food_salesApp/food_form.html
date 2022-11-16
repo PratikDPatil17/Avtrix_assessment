@@ -1,0 +1,21 @@
+{% extends "food_salesApp/base.html" %}
+
+{% block body_block %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Create/Update Food Order</h1>
+
+<!-- <h1>Student :</h1> -->
+	    <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" class="btn btn-primary" value="Create/Update">
+        </form>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

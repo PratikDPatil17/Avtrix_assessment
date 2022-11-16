@@ -1,0 +1,21 @@
+{% extends "food_salesApp/base.html" %}
+
+{% block body_block %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Confirm Delete: {{object.product}}</h1>
+
+<!-- <h1>Student :</h1> -->
+	    <form action="" method="post">
+            {% csrf_token %}
+            
+            <input type="submit" class="btn btn-danger" value="Delete">
+        </form>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

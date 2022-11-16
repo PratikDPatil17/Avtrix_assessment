@@ -1,0 +1,45 @@
+{% extends "food_salesApp/base.html" %}
+
+{% block body_block %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Food Order</h1>
+
+<!-- <h1>Student :</h1> -->
+	    {% if food %}
+	    <table class = "table"  border=2>
+	        <thead>
+	            <th>ID </th>
+                <th>product </th>
+	            <th>category </th>
+	            <th>OrderDate</th>
+	            <th>qty</th>
+	            <th>UnitPrice</th>
+	        </thead>
+	        
+	        <tr>
+	            <td>{{food.id}}</td>
+	            <td>{{food.product}}</td>
+	            <td>{{food.category}}</td>
+	            <td>{{food.OrderDate}}</td>
+	            <td>{{food.qty}}</td>
+	            <td>{{food.UnitPrice}}</td>
+	            <!-- <td><a href="/{{ food.id }}">details</a></td> -->
+	        </tr>
+	       
+	       
+	    
+	    </table>
+	    {% else %}
+	        <p>No Student data</p>
+	    {%endif%}
+    </div>
+    <a href="/update/{{food.pk}}" class="btn btn-primary" > Update Order</a>
+    <a href="/delete/{{food.pk}}" class="btn btn-danger" > Delete Order</a>
+
+</div>
+
+
+
+{% endblock %}
