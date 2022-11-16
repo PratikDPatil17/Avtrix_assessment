@@ -19,4 +19,8 @@
     2) Search based on product use search query - ?search=<Product name>
 
         http://127.0.0.1:8000/api/results/?search=Carrot
+
+3. To test API endpoints we are using Swagger -
+
+    1) Swagger doc - http://127.0.0.1:8000/api/docs
     
